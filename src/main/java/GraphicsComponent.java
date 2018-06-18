@@ -1,7 +1,15 @@
+import model.Scenery;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class GraphicsComponent extends JComponent {
+
+    private Scenery scenery;
+
+    public GraphicsComponent(Scenery scenery) {
+        this.scenery = scenery;
+    }
 
     @Override
     public Dimension getMinimumSize() {

@@ -1,12 +1,14 @@
+import model.Scenery;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class GameListener implements KeyListener {
 
-    private Game game;
+    private Scenery scenery;
 
-    public GameListener(Game game) {
-        this.game = game;
+    public GameListener(Scenery scenery) {
+        this.scenery = scenery;
     }
 
     public void keyTyped(KeyEvent e) {
