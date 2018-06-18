@@ -18,6 +18,11 @@ public class Player {
         return y;
     }
 
+    public void move(double dx, double dy) {
+        x += dx;
+        y += dy;
+    }
+
     public double distanceTo(Player p) {
         return Math.sqrt(Math.pow(x - p.getX(), 2) + Math.pow(y - p.getY(), 2));
     }
