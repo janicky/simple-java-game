@@ -26,4 +26,11 @@ public class Player {
     public double distanceTo(Player p) {
         return Math.sqrt(Math.pow(x - p.getX(), 2) + Math.pow(y - p.getY(), 2));
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[x: ").append(x).append(", y: ").append(y).append("]");
+        return sb.toString();
+    }
 }
