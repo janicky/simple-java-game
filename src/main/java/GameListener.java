@@ -6,12 +6,12 @@ import java.awt.event.KeyListener;
 public class GameListener implements KeyListener {
 
     private Scenery scenery;
-    private GraphicsComponent gc;
+    private Game game;
     private int ox = 0;
     private int oy = 0;
 
-    public GameListener(GraphicsComponent gc, Scenery scenery) {
-        this.gc = gc;
+    public GameListener(Game game, Scenery scenery) {
+        this.game = game;
         this.scenery = scenery;
     }
 
@@ -21,14 +21,14 @@ public class GameListener implements KeyListener {
 
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            oy = 1;
+            oy = -2;
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            oy = -1;
+            oy = 2;
         }
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            ox = -1;
+            ox = -2;
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            ox = 1;
+            ox = 2;
         }
         updateLocation();
     }
@@ -45,5 +45,6 @@ public class GameListener implements KeyListener {
 
     private void updateLocation() {
         scenery.getPlayer().move(ox, oy);
+        game.display();
     }
 }

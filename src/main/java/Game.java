@@ -13,13 +13,20 @@ public class Game extends JFrame {
         setSize(800, 600);
         setLocationRelativeTo(null);
 
-        addKeyListener(new GameListener(gc, scenery));
+        addKeyListener(new GameListener(this, scenery));
     }
 
     public void display() {
+        gc = new GraphicsComponent(scenery);
+        remove(gc);
         add(gc);
+        repaint();
         pack();
         setMinimumSize(getSize());
         setVisible(true);
+    }
+
+    public void repaint() {
+
     }
 }
