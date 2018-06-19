@@ -27,5 +27,7 @@ public class GraphicsComponent extends JComponent {
         super.paintComponent(g);
         g.setColor(Color.black);
         g.fillRect(0, 0, d.width, d.height);
+        g.setColor(Color.white);
+        g.fillOval(scenery.getPlayer().getX(), scenery.getPlayer().getY(), 30, 30);
     }
 }
