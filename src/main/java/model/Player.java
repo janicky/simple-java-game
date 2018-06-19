@@ -2,23 +2,23 @@ package model;
 
 public class Player {
 
-    private double x;
-    private double y;
+    private int x;
+    private int y;
 
-    public Player(double x, double y) {
+    public Player(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public double getX() {
+    public int getX() {
         return x;
     }
 
-    public double getY() {
+    public int getY() {
         return y;
     }
 
-    public void move(double dx, double dy) {
+    public void move(int dx, int dy) {
         x += dx;
         y += dy;
     }
